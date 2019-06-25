@@ -16,7 +16,7 @@ class PostsController extends Controller
     public function index($id)
     {
         //
-        return $id;
+        return 'hi';
     }
 
     /**
@@ -83,5 +83,9 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function contact() {
+        return view('contact');
     }
 }
