@@ -2,11 +2,12 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Model;
+
 use Faker\Generator as Faker;
 use App\Http\Controllers\Api\ProductController;
+use App\Product;
 
-$factory->define(ProductController::class, function (Faker $faker) {
+$factory->define(\App\Product::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'price' => $faker->randomFloat(2, 0 , 8),

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Api\ProductController as ProductController; 
 
 
 /*
@@ -20,4 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-    Route::get('products', 'ProductController@index');
+Route::namespace('Api')->name('api.')->group(function() {
+    Route::get('/products', 'ProductController@index')->name
+    ('products');
+});
